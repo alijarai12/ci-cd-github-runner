@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Pull Latest Docker Image
         run: |
-          docker pull alija10/myapp-web:latest
+          docker pull alija10/notes-app:latest
 
       - name: Stop and Remove Existing Containers
         run: |
