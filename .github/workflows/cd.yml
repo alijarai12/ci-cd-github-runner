@@ -31,5 +31,6 @@ jobs:
 
       - name: View Docker Compose Logs
         run: |
+
           docker-compose -f ../../docker-compose.yml logs -f
 
