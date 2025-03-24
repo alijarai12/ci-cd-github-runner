@@ -17,20 +17,17 @@ jobs:
 
       - name: Stop and Remove Existing Containers
         run: |
-          docker-compose -f ../../docker-compose.yml down || true     
+          sudo docker-compose down || true     
       - name: Start Application
         run: |
-          docker-compose -f ../../docker-compose.yml up -d
-      - name: Reload Nginx
+          sudo docker-compose up -d 
+          sudo docker-compose logs
+     - name: Reload Nginx
         run: |
           sudo nginx -s reload
 
       - name: Check Docker Containers Status
         run: |
-          docker ps
+          sudo docker ps
 
-      - name: View Docker Compose Logs
-        run: |
-
-          docker-compose -f ../../docker-compose.yml logs -f
 
