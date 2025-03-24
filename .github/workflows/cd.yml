@@ -1,0 +1,29 @@
+name: CD - Deploy Application
+
+on:
+  workflow_run:
+    workflows: ["CI - Build and Push Docker Image"]   # Runs after CI
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull Latest Docker Image
+        run: |
+          docker pull alija10/myapp-web:latest
+
+      - name: Stop and Remove Existing Containers
+        run: |
+          docker-compose down || true  # Stop running containers
+     
+      - name: Start Application
+        run: |
+          docker-compose up -d
+
+      - name: Restart Nginx
+        run: |
+          sudo systemctl restart nginx
+

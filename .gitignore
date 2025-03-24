@@ -1,2 +1,20 @@
 myenv
 db.sqlite3
+
+# Ignore GitHub Actions runner configuration and logs
+/actions-runner/_diag
+/actions-runner/_work
+/actions-runner/externals
+/actions-runner/bin
+/actions-runner/svc.sh
+/actions-runner/config.sh
+/actions-runner/env.sh
+/actions-runner/actions-runner-linux-x64-2.323.0.tar.gz
+
+# Ignore temporary files and system files
+.DS_Store
+*.swp
+*.bak
+*.tmp
+
+

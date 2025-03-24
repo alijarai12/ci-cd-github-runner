@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 3,
+  "agentName": "task-vm",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus11.actions.githubusercontent.com/DwwOG49DDXehb3Lz7Zc93IgsO4pLnwhlJ6gWhoYYSbsg31ZJI5/",
+  "gitHubUrl": "https://github.com/alijarai12/devops-task1",
+  "workFolder": "_work"
+}
