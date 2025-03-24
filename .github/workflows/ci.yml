@@ -20,10 +20,10 @@ jobs:
 
       - name: Build Web App Image
         run: |
-          sudo docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp-web:latest .
+          sudo docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/notes-app:latest .
 
       - name: Push Web App Image to DockerHub
         run: |
-          sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/myapp-web:latest
+          sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/notes-app:latest
 
 
