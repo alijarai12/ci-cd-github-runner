@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'std_management_system.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
-        "NAME": os.environ.get("POSTGRES_DB", "amnil_db"),
+        "NAME": os.environ.get("POSTGRES_DB", "devops_db"),
         "USER": os.environ.get("POSTGRES_USER", "testuser"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "testuser"),
         "PORT": os.environ.get("POSTGRES_PORT", "5432"),
