@@ -14,8 +14,6 @@ COPY requirements.txt /myapp/
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r /myapp/requirements.txt
 
-RUN python manage.py makemigrations
-RUN python manage.py migrate
 
 COPY . /myapp/
 

@@ -12,6 +12,15 @@ else
     echo "Docker is already installed."
 fi
 
+# Install Docker Compose if not installed
+if ! command -v docker-compose &> /dev/null
+then
+    echo "Installing Docker Compose..."
+    sudo apt install -y docker-compose
+else
+    echo "Docker Compose is already installed."
+fi
+
 # Install Nginx if not installed
 if ! command -v nginx &> /dev/null
 then
