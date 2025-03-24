@@ -23,7 +23,7 @@ jobs:
         run: |
           docker-compose up -d
 
-      - name: Restart Nginx
+      - name: Reload Nginx
         run: |
-          sudo systemctl restart nginx
+          sudo nginx -s reload
 
