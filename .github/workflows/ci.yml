@@ -25,5 +25,3 @@ jobs:
       - name: Push Web App Image to DockerHub
         run: |
           sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/notes-app:latest
-
-
