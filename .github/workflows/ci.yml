@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Web App Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/myapp-web:latest .
+          sudo docker build -t ${{ secrets.DOCKER_USERNAME }}/myapp-web:latest .
 
       - name: Login to DockerHub
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
