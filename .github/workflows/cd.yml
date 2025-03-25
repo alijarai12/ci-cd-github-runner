@@ -9,20 +9,26 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
-
     steps:
+      - name: Login to DockerHub
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | sudo docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+    
+    
       - name: Pull Latest Docker Image
         run: |
-          docker pull alija10/notes-app:latest
+          echo "Pulling latest docker image"
+          sudo docker pull alija10/notes-app:latest
 
       - name: Stop and Remove Existing Containers
         run: |
           sudo docker-compose down || true     
+     
       - name: Start Application
         run: |
           sudo docker-compose up -d 
           sudo docker-compose logs
-     - name: Reload Nginx
+  
+      - name: Reload Nginx
         run: |
           sudo nginx -s reload
 
