@@ -30,16 +30,15 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 # ALLOWED_HOSTS = [
+#     'devops-task.alija-rai.com.np'
 #     '0.0.0.0',
 #     'localhost',
 #     '127.0.0.1',
 #     '3.94.6.185',
 #     ]
 
+ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = [
-    *
-]
 
 # Application definition
 
