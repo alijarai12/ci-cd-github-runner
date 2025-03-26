@@ -109,24 +109,24 @@ Ensure the GitHub Actions Self-Hosted Runner is running.
 Trigger the pipeline by pushing changes to GitHub's master branch.
 
 
-## Screenshots & Results
+# Screenshots & Results
 
-Screenshot of Self-Hosted Runner:
+## Screenshot of Self-Hosted Runner:
 ![Self-Hosted Runner](image/seif-host-runner.png)
 
 
-Screenshot of GitHub Actions CI/CD Pipeline:
+## Screenshot of GitHub Actions CI/CD Pipeline:
 ![CI/CD Pipeline](image/ci-cd.png)
 
 
-Screenshot of Docker Private Registry in DockerHub:
+## Screenshot of Docker Private Registry in DockerHub:
 ![Private Registry](image/private-registry.png)
 
 
-Screenshot of Deployed Web Application:
+## Screenshot of Deployed Web Application:
 ![nginx Page](image/webpage.png)
 
 
-Screenshot of Database with the Pgadmin:
+## Screenshot of Database with the Pgadmin:
 ![nginx Page](image/db.png)
 
