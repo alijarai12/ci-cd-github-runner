@@ -7,15 +7,15 @@
 
 This project demonstrates the setup of a CI/CD pipeline for a Django web application using:
 
-Django Backend (in Docker)
+- Django Backend (in Docker)
 
-HTML Frontend
+- HTML, CSS Frontend
 
-PostgreSQL Database & pgAdmin for management
+- PostgreSQL Database & pgAdmin for management
 
-Nginx as a reverse proxy
+- Nginx as a reverse proxy
 
-GitHub Actions with a self-hosted runner
+- GitHub Actions with a self-hosted runner
 
 The goal is to automate the deployment of a Django app with Docker and GitHub Actions.
 
@@ -39,6 +39,7 @@ The goal is to automate the deployment of a Django app with Docker and GitHub Ac
    cd ci-cd-github-runner
 
 Run the setup-server.sh script to install and configure Docker and Nginx on your server:
+
     ```bash
     chmod +x setup-server.sh
     ./setup-server.sh
@@ -111,21 +112,21 @@ Trigger the pipeline by pushing changes to GitHub's master branch.
 ## Screenshots & Results
 
 Screenshot of Self-Hosted Runner:
-![Self-Hosted Runner](images/seif-host-runner.png)
+![Self-Hosted Runner](image/seif-host-runner.png)
 
 
 Screenshot of GitHub Actions CI/CD Pipeline:
-![CI/CD Pipeline](images/ci-cd.png)
+![CI/CD Pipeline](image/ci-cd.png)
 
 
 Screenshot of Docker Private Registry in DockerHub:
-![Private Registry](images/private-registry.png)
+![Private Registry](image/private-registry.png)
 
 
 Screenshot of Deployed Web Application:
-![nginx Page](images/webpage.png)
+![nginx Page](image/webpage.png)
 
 
 Screenshot of Database with the Pgadmin:
-![nginx Page](images/db.png)
+![nginx Page](image/db.png)
 
