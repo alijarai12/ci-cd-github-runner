@@ -105,6 +105,8 @@ Create a new Nginx configuration file for hosting the Django app. Ensure that it
 ## Final Deployment
 
 Ensure the GitHub Actions Self-Hosted Runner is running.
+![Runner](image/runner.png)
+
 
 Trigger the pipeline by pushing changes to GitHub's master branch.
 
