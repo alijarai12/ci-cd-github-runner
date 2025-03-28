@@ -16,7 +16,6 @@ services:
     container_name: myapp_web
     env_file:
       - .env
-    build: .
     restart: always
     volumes:
       - .:/myapp
