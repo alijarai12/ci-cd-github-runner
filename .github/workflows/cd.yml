@@ -22,14 +22,17 @@ jobs:
       - name: Stop and Remove Existing Containers
         run: |
           sudo docker-compose down || true   
-          existing_db_container=$(sudo docker ps -aq --filter "name=myapp_db")
-          if [ -n "$existing_db_container" ]; then
-            sudo docker rm -f $existing_db_container
+          # Ensure all related containers are removed
+          existing_containers=$(sudo docker ps -aq --filter "name=myapp_")
+          if [ -n "$existing_containers" ]; then
+            sudo docker rm -f $existing_containers
           fi
      
-      - name: Start Application
+      - name: Start Application with Updated Image
         run: |
-          sudo docker-compose up -d 
+          # Force update the 'web' service to use the new image
+          sudo docker-compose up -d --force-recreate --no-deps web
+          sudo docker-compose up -d pgadmin db  # Start other services
           sudo docker-compose logs
   
       - name: Reload Nginx
